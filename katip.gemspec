@@ -8,13 +8,12 @@ Gem::Specification.new do |spec|
   spec.version       = Katip::VERSION
   spec.authors       = %w[lab2023]
   spec.email         = %w[info@lab2023.com]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Write a gem description}
+  spec.summary       = %q{Write a gem summary}
   spec.homepage      = 'https://github.com/kebab-project/katip'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
-  spec.executables   = %w[daktilo]
   spec.require_paths = %w[lib]
 
   spec.add_development_dependency 'bundler', '~> 1.3'
