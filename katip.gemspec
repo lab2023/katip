@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Katip::VERSION
   spec.authors       = %w[lab2023]
   spec.email         = %w[info@lab2023.com]
-  spec.description   = %q{Write a gem description}
-  spec.summary       = %q{Write a gem summary}
+  spec.description   = %q{This is a Change Logging gem for a git initialized project.}
+  spec.summary       = %q{Planned to design a rake which dumps the change log as a list grouped by version tags. Log rows will contain links to commits, commit note and contributer name.}
   spec.homepage      = 'https://github.com/kebab-project/katip'
   spec.license       = 'MIT'
 
