@@ -1,5 +1,6 @@
 
 #### [Current]
+ * [a7200f0](a7200f0) #11 Fix bug Current commits is not seen on log file __(Murat Kemal BAYGÜN)__
  * [6385fff](6385fff) #8 Change executable file name to katip __(Murat Kemal BAYGÜN)__
 
 #### 0.2.0
