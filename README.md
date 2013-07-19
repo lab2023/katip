@@ -11,7 +11,9 @@ Log rows will contain links to commits, commit note and contributer name.
 
 To install Katip just use:
 
+```sh
 gem install katip
+```
 
 When using bundler put it in your Gemfile:
 
@@ -23,16 +25,17 @@ gem 'katip'
 
 ## Usage
 
+### Using the executable
+
 In your git initialized project directory simply run
 
-# Using the executable
 ```sh
   % daktilo
   Create CHANGELOG.md
 ```
 
 
-# Using as a rake
+### Using as a rake
 Add gem in your Gemfile:
 
 ```ruby
