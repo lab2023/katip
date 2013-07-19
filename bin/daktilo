@@ -6,6 +6,8 @@ def write_file(output, file_name=DEFAULT_FILE)
   begin
     file = File.open(file_name, "w")
     file.puts output
+
+    puts "Create #{file_name}"
   rescue IOError => e
     #some error occur, dir not writable etc.
   ensure
