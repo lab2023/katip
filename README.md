@@ -3,7 +3,9 @@ Katip
 
 This is a Change Logging gem for a git initialized project.
 
-Planned to design a rake which dumps the change log as a list grouped by version tags. Log rows will contain links to commits, commit note and contributer name.
+Katip is a gem which dumps the change log as a list grouped by version tags.
+It also has an executable ruby file **daktilo**, which can be used in any git project.
+Log rows will contain links to commits, commit note and contributer name.
 
 ## Installation
 
@@ -23,12 +25,28 @@ gem 'katip'
 
 In your git initialized project directory simply run
 
+# Using the executable
+```sh
+  % daktilo
+  Create CHANGELOG.md
+```
+
+
+# Using as a rake
+Add gem in your Gemfile:
+
+```ruby
+source 'https://rubygems.org'
+
+gem 'katip'
+```
+
 ```sh
   % rake katip:create
   Create CHANGELOG.md
 ```
 
-and that's it. You have a CHANGELOG.md file generated based on your git commits and created release tags.
+and that's it. You have a CHANGELOG.md file on project root, generated based on your git commits and created release tags.
 
 #### Links to resources
 
