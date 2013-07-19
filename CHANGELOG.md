@@ -1,6 +1,14 @@
 
 #### [Current]
 
+#### 0.2.0
+ * [61b2f06](61b2f06) Version 0.2.0 __(Murat Kemal BAYGÜN)__
+ * [9bd7659](9bd7659) #7 Fix documentation __(Murat Kemal BAYGÜN)__
+ * [2abca18](2abca18) #7 Organize readme, add usage for daktilo __(Murat Kemal BAYGÜN)__
+ * [b939475](b939475) #7 Add output message to inform user __(Murat Kemal BAYGÜN)__
+ * [99d3b3f](99d3b3f) #7 Add executable ruby file to gem to generate default output CHANGELOG.md __(Murat Kemal BAYGÜN)__
+ * [7265622](7265622)  #4 Add simple usage documentation on readme __(Murat Kemal BAYGÜN)__
+
 #### 0.1.0
  * [de3acfb](de3acfb) #6 Update gemspec __(Onur Ozgur OZKAN)__
  * [498c3d6](498c3d6) #6 Set gem __(Onur Ozgur OZKAN)__

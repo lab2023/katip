@@ -3,7 +3,7 @@ require 'katip/version'
 module Katip
   require 'katip/railtie' if defined?(Rails)
 
-  @@daktilo = <<-SHELL
+  @@katip = <<-SHELL
 # Get tags as an array
 TAGS_ARRAY=(`git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'`)
 
@@ -41,11 +41,11 @@ git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" $FIRST | grep -v "Me
   SHELL
 
   def self.set(param)
-    @@daktilo = param
+    @@katip = param
   end
 
   def self.get
-    @@daktilo
+    @@katip
   end
 
 end
