@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+DEFAULT_FILE='CHANGELOG.md'
+
+def write_file(output, file_name=DEFAULT_FILE)
+  begin
+    file = File.open(file_name, "w")
+    file.puts output
+  rescue IOError => e
+    #some error occur, dir not writable etc.
+  ensure
+    file.close unless file == nil
+  end
+end
+
+def parse_change_log
+
+  output = []
+
+  tags=`git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'`
+
+  tags = tags.split
+
+  tags.reverse!
+
+  output << "\n#### [Current]"
+
+  previous_tag=nil
+  tags.each do |tag|
+    current_tag = tag
+
+    if previous_tag
+      output << "\n#### #{previous_tag}"
+
+      output << `git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+    end
+
+    previous_tag = current_tag
+  end
+
+  output << "\n#### #{previous_tag}"
+  output << `git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" #{previous_tag} | grep -v "Merge branch "`
+
+  output
+end
+
+write_file parse_change_log
+
+
