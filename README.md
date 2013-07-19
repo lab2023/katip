@@ -5,7 +5,7 @@ This is a Change Logging gem for a git initialized project.
 
 Katip is a gem which dumps the change log as a list grouped by version tags.
 It also has an executable ruby file **katip**, which can be used in any git project.
-Log rows will contain links to commits, commit note and contributer name.
+Log rows will contain links to commits, commit note and contributor name.
 
 ## Installation
 

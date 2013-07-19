@@ -1,5 +1,6 @@
 
 #### [Current]
+ * [6385fff](6385fff) #8 Change executable file name to katip __(Murat Kemal BAYGÜN)__
 
 #### 0.2.0
  * [61b2f06](61b2f06) Version 0.2.0 __(Murat Kemal BAYGÜN)__
