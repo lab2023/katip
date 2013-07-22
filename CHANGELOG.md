@@ -1,5 +1,8 @@
 
 #### [Current]
+ * [7b5be3d](7b5be3d) #10 add output file name as optional parameter __(Murat Kemal BAYGÜN)__
+ * [695646c](695646c) #12 Add and correct information on gemspec __(Murat Kemal BAYGÜN)__
+ * [f30a3b2](f30a3b2) #9 Update rake job to use installed executable __(Murat Kemal BAYGÜN)__
  * [a7200f0](a7200f0) #11 Fix bug Current commits is not seen on log file __(Murat Kemal BAYGÜN)__
  * [6385fff](6385fff) #8 Change executable file name to katip __(Murat Kemal BAYGÜN)__
 

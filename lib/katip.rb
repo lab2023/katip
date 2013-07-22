@@ -13,4 +13,8 @@ module Katip
     @@katip
   end
 
+  def self.get_file(file_name)
+    @@katip = "katip #{file_name}"
+  end
+
 end

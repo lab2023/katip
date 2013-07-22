@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
-file_name='CHANGELOG.md'
+def write_file(output)
 
-if ARGV.length > 0
-  file_name=ARGV[0]
-end
+  file_name='CHANGELOG.md'
 
-def write_file(output, file_name)
+  if ARGV.length > 0
+    file_name=ARGV[0]
+  end
+
   begin
     file = File.open(file_name, 'w')
     file.puts output
@@ -50,6 +51,6 @@ def parse_change_log
   output
 end
 
-write_file parse_change_log, file_name
+write_file parse_change_log
 
 

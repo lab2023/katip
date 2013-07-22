@@ -34,6 +34,13 @@ In your git initialized project directory simply run
   Create CHANGELOG.md
 ```
 
+If you want to name your log file other than CHANGELOG.md
+
+```sh
+  % katip MyCustomFile.md
+  Create MyCustomFile.md
+```
+
 
 ### Using as a rake
 Add gem in your Gemfile:
@@ -49,7 +56,14 @@ gem 'katip'
   Create CHANGELOG.md
 ```
 
-and that's it. You have a CHANGELOG.md file on project root, generated based on your git commits and created release tags.
+If you want to name your log file other than CHANGELOG.md
+
+```sh
+  % rake katip:create file=MyCustomFile.md
+  Create MyCustomFile.md
+```
+
+and that's it. You have your change log file on project root, generated based on your git commits and created release tags.
 
 #### Links to resources
 
