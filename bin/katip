@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 
-DEFAULT_FILE='CHANGELOG.md'
+def write_file(output)
 
-def write_file(output, file_name=DEFAULT_FILE)
+  file_name='CHANGELOG.md'
+
+  if ARGV.length > 0
+    file_name=ARGV[0]
+  end
+
   begin
-    file = File.open(file_name, "w")
+    file = File.open(file_name, 'w')
     file.puts output
 
     puts "Create #{file_name}"
@@ -27,15 +32,15 @@ def parse_change_log
 
   output << "\n#### [Current]"
 
-  previous_tag=nil
+  previous_tag=''
   tags.each do |tag|
     current_tag = tag
 
-    if previous_tag
+    unless previous_tag.empty?
       output << "\n#### #{previous_tag}"
-
-      output << `git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
     end
+
+    output << `git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
 
     previous_tag = current_tag
   end
