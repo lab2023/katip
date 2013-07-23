@@ -1,5 +1,6 @@
 
 #### [Current]
+ * [6b8cfe7](6b8cfe7) #13 Add custom file name support to rake __(Murat Kemal BAYGÜN)__
  * [7b5be3d](7b5be3d) #10 add output file name as optional parameter __(Murat Kemal BAYGÜN)__
  * [695646c](695646c) #12 Add and correct information on gemspec __(Murat Kemal BAYGÜN)__
  * [f30a3b2](f30a3b2) #9 Update rake job to use installed executable __(Murat Kemal BAYGÜN)__
