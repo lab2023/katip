@@ -68,6 +68,10 @@ If you want to name your log file other than CHANGELOG.md
 
 and that's it. You have your change log file on project root, generated based on your git commits and created release tags.
 
+### Sample output
+
+[CHANGELOG.md](https://github.com/kebab-project/katip/blob/develop/CHANGELOG.md)
+
 #### Links to resources
 
 * Disqussion http://stackoverflow.com/questions/7387612/git-changelog-how-to-get-all-changes-up-to-a-specific-tag
@@ -83,7 +87,7 @@ http://github.com/kebab-project/katip/issues
 
 ## Contributing
 
-Cybele uses [TomDoc](http://tomdoc.org/), [rDoc](http://rubydoc.info/gems/cybele) and [SemVer](http://semver.org/), and takes it seriously.
+Katip uses [TomDoc](http://tomdoc.org/), [rDoc](http://rubydoc.info/gems/cybele) and [SemVer](http://semver.org/), and takes it seriously.
 
 Once you've made your great commits:
 
@@ -95,7 +99,7 @@ Once you've made your great commits:
 
 ## Credits
 
-- Cybele is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
+- Katip is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
 - Thank you to all the [contributors!](https://github.com/kebab-project/katip/graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
