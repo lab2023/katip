@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+REPO_URL='../../commit/'
+
 def write_file(output)
 
   file_name='CHANGELOG.md'
@@ -40,13 +42,13 @@ def parse_change_log
       output << "\n#### #{previous_tag}"
     end
 
-    output << `git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+    output << `git log --pretty=format:" * [%h](#{REPO_URL}%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
 
     previous_tag = current_tag
   end
 
   output << "\n#### #{previous_tag}"
-  output << `git log --pretty=format:" * [%h]($repo_url%h) %s __(%an)__" #{previous_tag} | grep -v "Merge branch "`
+  output << `git log --pretty=format:" * [%h](#{REPO_URL}%h) %s __(%an)__" #{previous_tag} | grep -v "Merge branch "`
 
   output
 end
