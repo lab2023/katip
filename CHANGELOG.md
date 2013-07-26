@@ -1,6 +1,13 @@
 
 #### [Current]
+ * [5fc6991](../../commit/5fc6991) #14 Update readme, add sample output __(Murat Kemal BAYGÜN)__
+ * [3f7788c](../../commit/3f7788c) #14 update README.md __(Onur Ozgur OZKAN)__
 
+#### 1.0.2
+ * [664e012](../../commit/664e012)  #15 Set version 1.0.2 __(Murat Kemal BAYGÜN)__
+
+#### 1.0.1
+ * [35f0b39](../../commit/35f0b39)  #15 Fixes broken commit URL   In previous version commit URL was broken unexpectedly.Current commit fixes broken URL and replaces it with the correct one __(Murat Kemal BAYGÜN)__
 
 #### 1.0.0
  * [cbec9c0](../../commit/cbec9c0) release version 1.0.0 __(Murat Kemal BAYGÜN)__
