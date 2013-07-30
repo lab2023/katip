@@ -1,5 +1,6 @@
 
 #### [Current]
+ * [8b22c6f](../../commit/8b22c6f) Add latest change log __(Murat Kemal BAYGÜN)__
  * [5fc6991](../../commit/5fc6991) #14 Update readme, add sample output __(Murat Kemal BAYGÜN)__
  * [3f7788c](../../commit/3f7788c) #14 update README.md __(Onur Ozgur OZKAN)__
 

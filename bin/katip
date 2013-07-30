@@ -2,6 +2,16 @@
 
 REPO_URL='../../commit/'
 
+def git_repository?
+  initialized = `git rev-parse --is-inside-work-tree`.chomp
+
+  if initialized != 'true'
+    initialized = false
+    puts 'Exiting. Nothing to create log file.'
+  end
+  initialized
+end
+
 def write_file(output)
 
   file_name='CHANGELOG.md'
@@ -53,6 +63,7 @@ def parse_change_log
   output
 end
 
-write_file parse_change_log
-
+if git_repository?
+  write_file parse_change_log
+end
 
