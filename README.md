@@ -77,16 +77,16 @@ and that's it. You have your change log file on project root, generated based on
 
 [![yaz_kizim](https://i1.ytimg.com/vi/v9L96Hh9jJc/mqdefault.jpg)](http://www.youtube.com/watch?v=v9L96Hh9jJc)
 
-**Wife:** Open the door, hey  hurry up, Open the door! If you don’t , I will break the door down
-**Şakir (performer Şener Şen):** take a note, 200 pocket cement, 20 truckland pebble, 15 doors
-**Wife:** Şakir!
-**Şakir:** Hey, welcome, 30 trunkland building sand
-**Wife:** the lowest of the low! rogue! Beneath comtempt guy
-**Şakir:** What’s up? Why are you shouting?
-**Wife:** what a shame, don’t answer back.  Women chaser! How could you do this to me?
-**Şakir:** Ooovv. Please don’t start to blame me again
-**Wife:** Son, Spit in your dad’s face
-**Wife:** what a poor bitch! The women who steal my husband  have not been born yet.
+- **Wife:** Open the door, hey  hurry up, Open the door! If you don’t , I will break the door down
+- **Şakir (performer Şener Şen):** take a note, 200 pocket cement, 20 truckland pebble, 15 doors
+- **Wife:** Şakir!
+- **Şakir:** Hey, welcome, 30 trunkland building sand
+- **Wife:** the lowest of the low! rogue! Beneath comtempt guy
+- **Şakir:** What’s up? Why are you shouting?
+- **Wife:** what a shame, don’t answer back.  Women chaser! How could you do this to me?
+- **Şakir:** Ooovv. Please don’t start to blame me again
+- **Wife:** Son, Spit in your dad’s face
+- **Wife:** what a poor bitch! The women who steal my husband  have not been born yet.
 
 ## Links to resources
 
