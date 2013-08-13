@@ -75,7 +75,7 @@ and that's it. You have your change log file on project root, generated based on
 
 ## An unforgettable scene from Yeşilçam
 
-[![yaz_kizim](//i1.ytimg.com/vi/v9L96Hh9jJc/mqdefault.jpg)](http://www.youtube.com/watch?v=v9L96Hh9jJc)
+[![yaz_kizim](https://i1.ytimg.com/vi/v9L96Hh9jJc/mqdefault.jpg)](http://www.youtube.com/watch?v=v9L96Hh9jJc)
 
 **Wife:** Open the door, hey  hurry up, Open the door! If you don’t , I will break the door down
 **Şakir (performer Şener Şen):** take a note, 200 pocket cement, 20 truckland pebble, 15 doors
