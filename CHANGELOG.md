@@ -1,5 +1,6 @@
 
 #### [Current]
+ * [7b5c1e2](../../commit/7b5c1e2) [#1](../../issues/1) Add links to issues in comments __(Murat Kemal BAYGÜN)__
  * [3780df9](../../commit/3780df9) typo fixed. __(Onur Özgür ÖZKAN)__
  * [2dbf361](../../commit/2dbf361) [#14](../../issues/14) fix video links image __(Murat Kemal BAYGÜN)__
  * [0a11741](../../commit/0a11741) [#14](../../issues/14) add video link and translation __(Murat Kemal BAYGÜN)__
