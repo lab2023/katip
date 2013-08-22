@@ -1,6 +1,17 @@
 #!/usr/bin/env ruby
 
-REPO_URL='../../commit/'
+COMMIT_URL='../../commit/'
+ISSUE_URL='../../issues/'
+
+def git_repository?
+  initialized = `git rev-parse --is-inside-work-tree`.chomp
+
+  if initialized != 'true'
+    initialized = false
+    puts 'Exiting. Nothing to create log file.'
+  end
+  initialized
+end
 
 def write_file(output)
 
@@ -42,17 +53,24 @@ def parse_change_log
       output << "\n#### #{previous_tag}"
     end
 
-    output << `git log --pretty=format:" * [%h](#{REPO_URL}%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+    output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) %s __(%an)__" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
 
     previous_tag = current_tag
   end
 
   output << "\n#### #{previous_tag}"
-  output << `git log --pretty=format:" * [%h](#{REPO_URL}%h) %s __(%an)__" #{previous_tag} | grep -v "Merge branch "`
+  output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) %s __(%an)__" #{previous_tag} | grep -v "Merge branch "`
+
+  output.each do |line|
+
+    line.gsub!(/#[1-9][0-9]*/) {|s| '[' + s + "](#{ISSUE_URL}" + s[-(s.length-1)..-1] + ')'}
+
+  end
 
   output
 end
 
-write_file parse_change_log
-
+if git_repository?
+  write_file parse_change_log
+end
 
