@@ -1,5 +1,6 @@
 
 #### [Current]
+ * [d1cdb61](../../commit/d1cdb61) [#17](../../issues/17) Revert breaking code __(Murat Kemal BAYGÜN)__
  * [0291a3f](../../commit/0291a3f) [#17](../../issues/17) improve gsub usage, fix double quotes __(Murat Kemal BAYGÜN)__
  * [3b25646](../../commit/3b25646) Merge pull request [#18](../../issues/18) from rderoldan1/develop __(Murat Kemal BAYGÜN)__
  * [081a185](../../commit/081a185) Update katip binary __(Ruben Espinosa)__
