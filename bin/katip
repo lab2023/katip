@@ -63,7 +63,7 @@ def parse_change_log
 
   output.each do |line|
 
-    line.encode("utf-8", invalid: :replace, undef: :replace, replace: '').gsub!(/#[1-9][0-9]*/) {|s| '[' + s + "](#{ISSUE_URL}" + s[-(s.length-1)..-1] + ')'}
+    line.encode('utf-8', invalid: :replace, undef: :replace, replace: '').gsub!(/#[1-9][0-9]*/) {|s| "[#{s}](#{ISSUE_URL}#{s[-(s.length-1)..-1]})"}
 
   end
 
