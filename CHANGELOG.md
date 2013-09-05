@@ -1,5 +1,7 @@
 
 #### [Current]
+ * [c9b0d1d](../../commit/c9b0d1d) __(Murat Kemal BAYGÜN)__ Multiline commit note support added as referenced in common
+standards, and writing good commit notes
  * [72053a5](../../commit/72053a5) __(Murat Kemal BAYGÜN)__ [#19](../../issues/19) Check if commit includes issue number before replacing with links
  * [002a534](../../commit/002a534) __(Murat Kemal BAYGÜN)__ [#17](../../issues/17) Apply encoding before setting issue links
  * [d1cdb61](../../commit/d1cdb61) __(Murat Kemal BAYGÜN)__ [#17](../../issues/17) Revert breaking code
