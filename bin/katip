@@ -53,21 +53,18 @@ def parse_change_log
       output << "\n#### #{previous_tag}"
     end
 
-    output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) __(%an)__ %B" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+    output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
 
     previous_tag = current_tag
   end
 
   output << "\n#### #{previous_tag}"
-  output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) __(%an)__ %B" #{previous_tag} | grep -v "Merge branch "`
+
+  output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" #{previous_tag} | grep -v "Merge branch "`
 
   output.each do |line|
 
     line.encode!('utf-8', invalid: :replace, undef: :replace, replace: '')
-
-    while line.index(/\n\n/)
-      line.gsub!(/\n\n/, "\n")
-    end
 
     if line.index(/#[1-9][0-9]*/)
       line.gsub!(/#[1-9][0-9]*/) {|s| "[#{s}](#{ISSUE_URL}#{s[-(s.length-1)..-1]})"}
