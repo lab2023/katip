@@ -1,5 +1,10 @@
 
 #### [Current]
+ * [6391f34](../../commit/6391f34) - __(Murat Kemal BAYGÜN)__  [#21](../../issues/21) Add multiline commit support
+
+Multiline commit note support added as referenced in common
+standards, and writing good commit notes. Previous commit was not
+working as expected
 
 
 #### 1.2.0
