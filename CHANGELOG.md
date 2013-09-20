@@ -1,6 +1,6 @@
 
 #### [Current]
-
+ * [632117c](../../commit/632117c) - __(Murat Kemal BAYGÜN)__ [#20](../../issues/20) Resolve unexpected autorun behaviour caused by initialize
 
 #### 1.2.1
  * [05b92d4](../../commit/05b92d4) - __(Murat Kemal BAYGÜN)__ Release 1.2.1
