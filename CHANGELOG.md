@@ -1,8 +1,10 @@
 
 #### [Current]
- * [632117c](../../commit/632117c) - __(Murat Kemal BAYGÜN)__ [#20](../../issues/20) Resolve unexpected autorun behaviour caused by initialize
+ * [78178f7](../../commit/78178f7) - __(Ruben Espinosa)__ Merge pull request [#1](../../issues/1) from kebab-project/develop
 
-#### 1.2.1
+Project update
+ * [5d90550](../../commit/5d90550) - __(Murat Kemal BAYGÜN)__ Release 1.3.0
+ * [632117c](../../commit/632117c) - __(Murat Kemal BAYGÜN)__ [#20](../../issues/20) Resolve unexpected autorun behaviour caused by initialize
  * [05b92d4](../../commit/05b92d4) - __(Murat Kemal BAYGÜN)__ Release 1.2.1
  * [6391f34](../../commit/6391f34) - __(Murat Kemal BAYGÜN)__  [#21](../../issues/21) Add multiline commit support
 
@@ -10,8 +12,6 @@ Multiline commit note support added as referenced in common
 standards, and writing good commit notes. Previous commit was not
 working as expected
 
-
-#### 1.2.0
  * [b509621](../../commit/b509621) - __(Murat Kemal BAYGÜN)__ Release 1.2.0
  * [c9b0d1d](../../commit/c9b0d1d) - __(Murat Kemal BAYGÜN)__ Multiline commit note support added as referenced in common standards, and writing good commit notes
  * [72053a5](../../commit/72053a5) - __(Murat Kemal BAYGÜN)__ [#19](../../issues/19) Check if commit includes issue number before replacing with links

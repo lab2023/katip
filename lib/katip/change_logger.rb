@@ -74,8 +74,7 @@ module Katip
       output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" #{previous_tag} | grep -v "Merge branch "`
 
       output.each do |line|
-
-        line.encode!('utf-8', invalid: :replace, undef: :replace, replace: '')
+        line.encode!('utf-8', 'utf-8', invalid: :replace, undef: :replace, replace: '')
 
         if line.index(/#[1-9][0-9]*/)
           line.gsub!(/#[1-9][0-9]*/) {|s| "[#{s}](#{ISSUE_URL}#{s[-(s.length-1)..-1]})"}
