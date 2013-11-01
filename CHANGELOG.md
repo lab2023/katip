@@ -1,5 +1,19 @@
 
 #### [Current]
+ * [21ef703](../../commit/21ef703) - __(H. Türkü Kaya)__ [#25](../../issues/25) Fix gem name for security.md
+ * [cd942dc](../../commit/cd942dc) - __(H. Türkü Kaya)__ [#25](../../issues/25) Security.md added
+ * [dc2f6c1](../../commit/dc2f6c1) - __(Murat Kemal BAYGÜN)__ [#24](../../issues/24) Change LICENSE.txt file name to MIT-LICENSE.txt
+ * [056467b](../../commit/056467b) - __(Murat Kemal BAYGÜN)__ [#24](../../issues/24) Add MIT License: LICENSE.txt
+ * [0b85ff9](../../commit/0b85ff9) - __(Murat Kemal BAYGÜN)__ Merge pull request [#23](../../issues/23) from rderoldan1/develop
+
+change_logger.rb:80:in `index': invalid byte sequence in UTF-8 (ArgumentError)
+ * [0cbb45e](../../commit/0cbb45e) - __(Ruben Espinosa)__ Error in encodign some characters in utf-8
+ * [78178f7](../../commit/78178f7) - __(Ruben Espinosa)__ Merge pull request [#1](../../issues/1) from kebab-project/develop
+
+Project update
+
+#### 1.3.0
+ * [5d90550](../../commit/5d90550) - __(Murat Kemal BAYGÜN)__ Release 1.3.0
  * [632117c](../../commit/632117c) - __(Murat Kemal BAYGÜN)__ [#20](../../issues/20) Resolve unexpected autorun behaviour caused by initialize
 
 #### 1.2.1
