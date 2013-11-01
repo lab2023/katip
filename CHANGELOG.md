@@ -1,5 +1,9 @@
 
 #### [Current]
+ * [21ef703](../../commit/21ef703) - __(H. Türkü Kaya)__ [#25](../../issues/25) Fix gem name for security.md
+ * [cd942dc](../../commit/cd942dc) - __(H. Türkü Kaya)__ [#25](../../issues/25) Security.md added
+ * [dc2f6c1](../../commit/dc2f6c1) - __(Murat Kemal BAYGÜN)__ [#24](../../issues/24) Change LICENSE.txt file name to MIT-LICENSE.txt
+ * [056467b](../../commit/056467b) - __(Murat Kemal BAYGÜN)__ [#24](../../issues/24) Add MIT License: LICENSE.txt
  * [0b85ff9](../../commit/0b85ff9) - __(Murat Kemal BAYGÜN)__ Merge pull request [#23](../../issues/23) from rderoldan1/develop
 
 change_logger.rb:80:in `index': invalid byte sequence in UTF-8 (ArgumentError)
