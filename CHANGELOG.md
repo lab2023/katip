@@ -1,5 +1,12 @@
 
 #### [Current]
+ * [f8b07a7](../../commit/f8b07a7) - __(Onur Özgür ÖZKAN)__ Merge pull request [#27](../../issues/27) from marjinal1st/feature/WithoutRails
+
+TB-11 #time 15m Use Katip without Rails
+ * [471e25e](../../commit/471e25e) - __(Ahmet Sezgin Duran)__ TB-11 #time 15m Use Katip without Rails
+
+#### 1.4.0
+ * [387b0b5](../../commit/387b0b5) - __(Murat Kemal BAYGÜN)__ Release 1.4.0
  * [21ef703](../../commit/21ef703) - __(H. Türkü Kaya)__ [#25](../../issues/25) Fix gem name for security.md
  * [cd942dc](../../commit/cd942dc) - __(H. Türkü Kaya)__ [#25](../../issues/25) Security.md added
  * [dc2f6c1](../../commit/dc2f6c1) - __(Murat Kemal BAYGÜN)__ [#24](../../issues/24) Change LICENSE.txt file name to MIT-LICENSE.txt
