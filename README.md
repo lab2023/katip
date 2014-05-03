@@ -115,10 +115,10 @@ Once you've made your great commits:
 
 ## Credits
 
-- Katip is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
+- Katip is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 - Thank you to all the [contributors!](https://github.com/kebab-project/katip/graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
 ## License
 
-Copyright 2012 lab2023 – internet technologies
+Copyright 2012 lab2023 - information technologies
