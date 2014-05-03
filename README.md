@@ -121,4 +121,4 @@ Once you've made your great commits:
 
 ## License
 
-Copyright 2012 lab2023 - information technologies
+Copyright 2014 lab2023 - information technologies
