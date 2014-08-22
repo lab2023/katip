@@ -1,4 +1,3 @@
-0.4.0
 
 #### 0.4.0
  * [daec484](../../commit/daec484) - __(Ahmet Sezgin Duran)__ Bump version 0.4.0

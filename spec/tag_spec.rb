@@ -8,7 +8,7 @@ describe 'Tag system' do
   end
 
   it 'creates the change log with the given tag range' do
-    change_logger = Katip::ChangeLogger.new from: '0.1.0', to: '0.4.0'
+    change_logger = Katip::ChangeLogger.new 'CHANGELOG.md', '0.1.0', '0.4.0'
     change_logger.log_changes
 
     original_file = Digest::MD5.file('../results/TagRangeLog.md').to_s

@@ -9,8 +9,10 @@ module Katip
     # initialize
     #
     # @param [String] file_name with path
-    def initialize(file_name='CHANGELOG.md')
+    def initialize(file_name='CHANGELOG.md', from=nil, to=nil)
       @file_name = file_name
+      @tag_from = from
+      @tag_to = to
     end
 
     def log_changes
@@ -20,6 +22,7 @@ module Katip
     end
 
     private
+
     def git_repository?
       initialized = `git rev-parse --is-inside-work-tree`.chomp
 
@@ -45,16 +48,21 @@ module Katip
     end
 
     def parse_change_log
-
       output = []
 
-      tags=`git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'`
+      unless @tag_to.nil? || @tag_from.nil?
+        tags = `git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'# | awk '/#{@tag_from}/,/#{@tag_to}/'`
+      else
+        tags = `git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'#`
+      end
+
+
 
       tags = tags.split
 
       tags.reverse!
 
-      output << "\n#### [Current]"
+      output << "\n#### [Current]" if @tag_to.nil?
 
       previous_tag=''
       tags.each do |tag|
@@ -64,7 +72,9 @@ module Katip
           output << "\n#### #{previous_tag}"
         end
 
-        output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+        if @tag_to.nil? || !previous_tag.empty?
+          output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+        end
 
         previous_tag = current_tag
       end
