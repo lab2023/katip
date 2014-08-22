@@ -42,8 +42,8 @@ describe 'Katip application' do
 
 
   after do
-    FileUtils.rm 'CHANGELOG.md' if File.exists?('CHANGELOG.md')
-    FileUtils.rm 'SampleChangeLog.md' if File.exists?('SampleChangeLog.md')
-    FileUtils.rm 'MyChangelog.md' if File.exists?('MyChangelog.md')
+    FileUtils.rm 'CHANGELOG.md' if File.exists? File.join(repo, 'CHANGELOG.md')
+    FileUtils.rm 'SampleChangeLog.md' if File.exists? File.join(repo, 'SampleChangeLog.md')
+    FileUtils.rm 'MyChangelog.md' if File.exists? File.join(repo, 'MyChangelog.md')
   end
 end
