@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/../lib"))
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + '/../lib'))
 
 require 'katip'
 require 'katip/change_logger'
@@ -8,7 +8,7 @@ require 'katip/change_logger'
 if ARGV.size > 0
   change_logger = Katip::ChangeLogger.new(ARGV.first)
 else
-  change_logger = Katip::ChangeLogger.new()
+  change_logger = Katip::ChangeLogger.new
 end
 
 change_logger.log_changes
