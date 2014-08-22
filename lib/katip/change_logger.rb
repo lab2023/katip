@@ -50,15 +50,25 @@ module Katip
     def parse_change_log
       output = []
 
-      unless @tag_to.nil? || @tag_from.nil?
-        tags = `git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'# | awk '/#{@tag_from}/,/#{@tag_to}/'`
-      else
-        tags = `git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'#`
-      end
-
-
+      tags = `git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'#`
 
       tags = tags.split
+      prev_begin = nil
+
+      if !@tag_from.nil? && !@tag_to.nil?
+        from = tags.index(@tag_from)
+        to = tags.index(@tag_to)
+        tags = tags[from..to]
+        puts tags
+      elsif !@tag_from.nil?
+        from = tags.index @tag_from
+        prev_begin = tags[from - 1]
+        tags = tags[from..-1]
+        puts tags
+      elsif !@tag_to.nil?
+        to = tags.index @tag_to
+        tags = tags[0..to]
+      end
 
       tags.reverse!
 
@@ -72,7 +82,7 @@ module Katip
           output << "\n#### #{previous_tag}"
         end
 
-        if @tag_to.nil? || !previous_tag.empty?
+        if !previous_tag.empty? || @tag_to.nil?
           output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
         end
 
@@ -81,7 +91,13 @@ module Katip
 
       output << "\n#### #{previous_tag}"
 
-      output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" #{previous_tag} | grep -v "Merge branch "`
+      if prev_begin.nil?
+        output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" #{previous_tag} | grep -v "Merge branch "`
+      else
+        output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{prev_begin}".."#{previous_tag}" | grep -v "Merge branch "`
+      end
+
+
 
       output.each do |line|
         line.encode!('utf-8', 'utf-8', invalid: :replace, undef: :replace, replace: '')
