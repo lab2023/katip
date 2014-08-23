@@ -4,11 +4,29 @@ $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + '/../lib'))
 
 require 'katip'
 require 'katip/change_logger'
+require 'optparse'
+
+options = { :from => nil, :to => nil }
+
+parser = OptionParser.new do |opts|
+  opts.on '-f', '--from from', 'From' do |from|
+    options[:from] = from
+  end
+
+  opts.on '-t', '--to to', 'To' do |to|
+    options[:to] = to
+  end
+end
+
+parser.parse! ARGV
+
+options[:from] = options[:from].nil? ? nil : options[:from].to_s
+options[:to] = options[:to].nil? ? nil : options[:to].to_s
 
 if ARGV.size > 0
-  change_logger = Katip::ChangeLogger.new(ARGV.first)
+  change_logger = Katip::ChangeLogger.new(ARGV.first, options[:from], options[:to])
 else
-  change_logger = Katip::ChangeLogger.new
+  change_logger = Katip::ChangeLogger.new('CHANGELOG.md', options[:from], options[:to])
 end
 
 change_logger.log_changes

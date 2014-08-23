@@ -59,12 +59,10 @@ module Katip
         from = tags.index(@tag_from)
         to = tags.index(@tag_to)
         tags = tags[from..to]
-        puts tags
       elsif !@tag_from.nil?
         from = tags.index @tag_from
         prev_begin = tags[from - 1]
         tags = tags[from..-1]
-        puts tags
       elsif !@tag_to.nil?
         to = tags.index @tag_to
         tags = tags[0..to]
