@@ -1,3 +1,0 @@
-[submodule "spec/katip-sample-repo"]
-	path = spec/katip-sample-repo
-	url = git://github.com/marjinal1st/katip-sample-repo.git
