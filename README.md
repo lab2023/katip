@@ -44,6 +44,15 @@ If you want to name your log file other than CHANGELOG.md
   Create MyCustomFile.md
 ```
 
+Also you can easily specify tag ranges:
+
+```sh
+  % katip --from=0.2.0 --to=0.9.1
+  # Or
+  % katip --from=0.2.0
+  # Or
+  % katip --to=0.9.1
+```
 
 ### Using as a rake
 Add gem in your Gemfile:

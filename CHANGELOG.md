@@ -1,5 +1,21 @@
 
 #### [Current]
+ * [310024d](../../commit/310024d) - __(Ahmet Sezgin Duran)__ TB-46 #time 15m Add option parse for Katip
+ * [e1d8eae](../../commit/e1d8eae) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Fix test result files
+ * [72db774](../../commit/72db774) - __(Ahmet Sezgin Duran)__ Add new sample repo submodule
+ * [b397a22](../../commit/b397a22) - __(Ahmet Sezgin Duran)__ Remove sample repo submodule
+ * [d4788d6](../../commit/d4788d6) - __(Ahmet Sezgin Duran)__ TB-46 #time 15m Implement change logging with ending tag
+ * [b2e8163](../../commit/b2e8163) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Implement the basic tag range logging
+ * [94e3c7d](../../commit/94e3c7d) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Add tag range test
+ * [fe8caf7](../../commit/fe8caf7) - __(Ahmet Sezgin Duran)__ TB-46 #time 15m Add basic tests
+ * [75e9d4c](../../commit/75e9d4c) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Add RSpec for testing
+ * [33ecf6b](../../commit/33ecf6b) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Add sample repo as submodule
+ * [8d3a0b1](../../commit/8d3a0b1) - __(Ahmet Sezgin Duran)__ LAB-31 #time 1 Add named logo
+ * [9c7e65c](../../commit/9c7e65c) - __(Ahmet Sezgin Duran)__ LAB-31 #time 1m Fix year information in README.md and license
+ * [195e061](../../commit/195e061) - __(Ahmet Sezgin Duran)__ LAB-31 #time 2m Update README.md
+
+#### 1.4.1
+ * [1629eb6](../../commit/1629eb6) - __(Murat Kemal BAYGÜN)__ Release 1.4.1
  * [f8b07a7](../../commit/f8b07a7) - __(Onur Özgür ÖZKAN)__ Merge pull request [#27](../../issues/27) from marjinal1st/feature/WithoutRails
 
 TB-11 #time 15m Use Katip without Rails
