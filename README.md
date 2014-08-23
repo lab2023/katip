@@ -44,6 +44,15 @@ If you want to name your log file other than CHANGELOG.md
   Create MyCustomFile.md
 ```
 
+Also you can easily specify tag ranges:
+
+```sh
+  % katip --from=0.2.0 --to=0.9.1
+  # Or
+  % katip --from=0.2.0
+  # Or
+  % katip --to=0.9.1
+```
 
 ### Using as a rake
 Add gem in your Gemfile:
@@ -115,10 +124,12 @@ Once you've made your great commits:
 
 ## Credits
 
-- Katip is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
+![lab2023](http://lab2023.com/assets/images/named-logo.png)
+
+- Katip is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 - Thank you to all the [contributors!](https://github.com/kebab-project/katip/graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
 ## License
 
-Copyright 2012 lab2023 – internet technologies
+Copyright 2014 lab2023 - information technologies

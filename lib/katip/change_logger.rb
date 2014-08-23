@@ -9,8 +9,10 @@ module Katip
     # initialize
     #
     # @param [String] file_name with path
-    def initialize(file_name='CHANGELOG.md')
+    def initialize(file_name='CHANGELOG.md', from=nil, to=nil)
       @file_name = file_name
+      @tag_from = from
+      @tag_to = to
     end
 
     def log_changes
@@ -20,6 +22,7 @@ module Katip
     end
 
     private
+
     def git_repository?
       initialized = `git rev-parse --is-inside-work-tree`.chomp
 
@@ -45,16 +48,29 @@ module Katip
     end
 
     def parse_change_log
-
       output = []
 
-      tags=`git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'`
+      tags = `git for-each-ref --sort='*authordate' --format='%(tag)' refs/tags | grep -v '^$'#`
 
       tags = tags.split
+      prev_begin = nil
+
+      if !@tag_from.nil? && !@tag_to.nil?
+        from = tags.index(@tag_from)
+        to = tags.index(@tag_to)
+        tags = tags[from..to]
+      elsif !@tag_from.nil?
+        from = tags.index @tag_from
+        prev_begin = tags[from - 1]
+        tags = tags[from..-1]
+      elsif !@tag_to.nil?
+        to = tags.index @tag_to
+        tags = tags[0..to]
+      end
 
       tags.reverse!
 
-      output << "\n#### [Current]"
+      output << "\n#### [Current]" if @tag_to.nil?
 
       previous_tag=''
       tags.each do |tag|
@@ -64,14 +80,22 @@ module Katip
           output << "\n#### #{previous_tag}"
         end
 
-        output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+        if !previous_tag.empty? || @tag_to.nil?
+          output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{current_tag}".."#{previous_tag}" | grep -v "Merge branch "`
+        end
 
         previous_tag = current_tag
       end
 
       output << "\n#### #{previous_tag}"
 
-      output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" #{previous_tag} | grep -v "Merge branch "`
+      if prev_begin.nil?
+        output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" #{previous_tag} | grep -v "Merge branch "`
+      else
+        output << `git log --pretty=format:" * [%h](#{COMMIT_URL}%h) - __(%an)__ %s%n%n%-b" "#{prev_begin}".."#{previous_tag}" | grep -v "Merge branch "`
+      end
+
+
 
       output.each do |line|
         line.encode!('utf-8', 'utf-8', invalid: :replace, undef: :replace, replace: '')
