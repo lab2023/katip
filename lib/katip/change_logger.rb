@@ -17,7 +17,8 @@ module Katip
 
     def log_changes
       if git_repository?
-        write_file parse_change_log
+        output = parse_change_log
+        write_file output unless output.empty?
       end
     end
 
@@ -54,6 +55,11 @@ module Katip
 
       tags = tags.split
       prev_begin = nil
+
+      if (!@tag_from.nil? && !tags.include?(@tag_from)) || (!@tag_to.nil? && !tags.include?(@tag_to))
+        show_not_found_message(tags)
+        return output
+      end
 
       if !@tag_from.nil? && !@tag_to.nil?
         from = tags.index(@tag_from)
@@ -106,6 +112,12 @@ module Katip
       end
 
       output
+    end
+
+    def show_not_found_message(tags)
+      puts 'Could not find the given tags. Make sure that given tags exist.'
+      puts 'Listing found tags:'
+      puts tags
     end
   end
 end
