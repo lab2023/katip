@@ -1,5 +1,10 @@
 
 #### [Current]
+ * [2191cbf](../../commit/2191cbf) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Fix condition errors
+ * [544b0ea](../../commit/544b0ea) - __(Ahmet Sezgin Duran)__ TB-46 #time 10m Fix the tag not found error
+
+#### 1.5.0
+ * [b3e600f](../../commit/b3e600f) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Bump version 1.5.0 and update README
  * [310024d](../../commit/310024d) - __(Ahmet Sezgin Duran)__ TB-46 #time 15m Add option parse for Katip
  * [e1d8eae](../../commit/e1d8eae) - __(Ahmet Sezgin Duran)__ TB-46 #time 5m Fix test result files
  * [72db774](../../commit/72db774) - __(Ahmet Sezgin Duran)__ Add new sample repo submodule
