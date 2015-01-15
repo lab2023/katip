@@ -79,7 +79,7 @@ and that's it. You have your change log file on project root, generated based on
 
 ### Sample output
 
-[CHANGELOG.md](https://github.com/kebab-project/katip/blob/develop/CHANGELOG.md)
+[CHANGELOG.md](../../CHANGELOG.md)
 
 
 ## An unforgettable scene from Yeşilçam
@@ -108,7 +108,7 @@ and that's it. You have your change log file on project root, generated based on
 
 If you discover any bugs or want to drop a line, feel free to create an issue on GitHub.
 
-http://github.com/kebab-project/katip/issues
+http://github.com/lab2023/katip/issues
 
 ## Contributing
 
@@ -127,7 +127,7 @@ Once you've made your great commits:
 ![lab2023](http://lab2023.com/assets/images/named-logo.png)
 
 - Katip is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
-- Thank you to all the [contributors!](https://github.com/kebab-project/katip/graphs/contributors)
+- Thank you to all the [contributors!](../../graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
 ## License
