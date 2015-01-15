@@ -79,7 +79,7 @@ and that's it. You have your change log file on project root, generated based on
 
 ### Sample output
 
-[CHANGELOG.md](../../CHANGELOG.md)
+[CHANGELOG.md](./CHANGELOG.md)
 
 
 ## An unforgettable scene from Yeşilçam
